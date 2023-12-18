@@ -12,7 +12,7 @@ import '../top_picks_for_you_screen/controller/top_picks_for_you_controller.dart
 import '../top_picks_for_you_screen/models/productdetails_item_model.dart';
 import '../top_picks_for_you_screen/widgets/productdetails_item_widget.dart';
 import '../zoom_image_screen/zoom_image_screen.dart';
-import 'controller/detail_tab_container_controller.dart';
+import 'controller/detail_tab_container_controller2.dart';
 
 class DetailTabContainerScreen extends StatefulWidget {
   const DetailTabContainerScreen({super.key});
@@ -23,8 +23,8 @@ class DetailTabContainerScreen extends StatefulWidget {
 }
 
 class _DetailTabContainerScreenState extends State<DetailTabContainerScreen> {
-  DetailTabContainerController detailTabContainerController =
-      Get.put(DetailTabContainerController());
+  DetailTabContainerController2 detailTabContainerController =
+      Get.put(DetailTabContainerController2());
         ProductdetailsItemModel selectedProduct =
       Get.arguments as ProductdetailsItemModel;
 
@@ -58,8 +58,8 @@ class _DetailTabContainerScreenState extends State<DetailTabContainerScreen> {
                 body: GetBuilder<CustomBottomBarController>(
                   init: CustomBottomBarController(),
                   builder: (customBottomBarController) =>
-                      GetBuilder<DetailTabContainerController>(
-                    init: DetailTabContainerController(),
+                      GetBuilder<DetailTabContainerController2>(
+                    init: DetailTabContainerController2(),
                     builder: (controller) => Stack(
                       children: [
                         SizedBox(

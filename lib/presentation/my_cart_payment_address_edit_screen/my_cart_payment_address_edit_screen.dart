@@ -7,7 +7,7 @@ import 'package:beg_app/widgets/app_bar/custom_app_bar.dart';
 import 'package:beg_app/widgets/custom_checkbox_button.dart';
 import 'package:beg_app/widgets/custom_elevated_button.dart';
 
-import 'controller/my_cart_payment_address_edit_controller.dart';
+import 'controller/my_cart_.dart';
 
 class MyCartPaymentAddressEditScreen
     extends GetWidget<MyCartPaymentAddressEditController> {

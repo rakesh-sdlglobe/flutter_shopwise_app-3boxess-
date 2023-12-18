@@ -10,11 +10,11 @@ class HomeModel {
   static List<SlidercarItemModel> slidercarItemList() {
     return [
       SlidercarItemModel(
-          ImageConstant.imgSlider1st, "30% Off On Flower Plants"),
+          ImageConstant.imgSlider1st, "10% Off On Flower Plants"),
       SlidercarItemModel(
-          ImageConstant.imgSlider2nd, "50% Off On First Any Order"),
+          ImageConstant.imgSlider2nd, "15% Off On First Any Order"),
       SlidercarItemModel(
-          ImageConstant.imgSlider3rd, "50% Off On First Any Order"),
+          ImageConstant.imgSlider3rd, "10% Off On First Any Order"),
     ];
   }
 

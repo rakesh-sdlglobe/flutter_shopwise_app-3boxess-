@@ -89,7 +89,7 @@ class _TopPicksForYouScreenState extends State<TopPicksForYouScreen> {
                             return animationFunction(
                                 index,
                                 product_formate(model, () {
-                                  onTapProductdetails();
+                                  onTapProductdetails(model);
                                 },
                                     CustomImageView(
                                         onTap: () {
@@ -108,8 +108,8 @@ class _TopPicksForYouScreenState extends State<TopPicksForYouScreen> {
     );
   }
 
-  onTapProductdetails() {
-    Get.toNamed(AppRoutes.detailTabContainerScreen);
+  onTapProductdetails(ProductdetailsItemModel selectedProduct) {
+    Get.toNamed(AppRoutes.detailTabContainerScreen,arguments: selectedProduct,);
   }
 
   onTapArrowleftone() {

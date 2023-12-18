@@ -107,7 +107,9 @@ class _HomePageState extends State<HomePage> {
                                       return Padding(
                                         padding: getPadding(left: 8, right: 8),
                                         child: GestureDetector(
-                                          onTap: () {},
+                                          onTap: () {
+                                            Get.toNamed(AppRoutes.ourSpecialityScreen);
+                                          },
                                           child: Container(
                                             // width: getSize(308),
                                             height: getSize(154),
@@ -130,14 +132,16 @@ class _HomePageState extends State<HomePage> {
                                                 children: [
                                                   SizedBox(
                                                     width: getHorizontalSize(
-                                                      135,
+                                                      90,
                                                     ),
                                                     child: Text(data.title!,
                                                         maxLines: 2,
                                                         overflow: TextOverflow
                                                             .ellipsis,
                                                         style: theme.textTheme
-                                                            .titleMedium),
+                                                            .titleMedium,
+                                                        
+                                                            ),
                                                   ),
                                                   Padding(
                                                     padding: getPadding(
@@ -150,61 +154,64 @@ class _HomePageState extends State<HomePage> {
                                                           padding: getPadding(
                                                             top: 1,
                                                           ),
-                                                          child: ElevatedButton(
-                                                            onPressed: () {
-                                                              Get.toNamed(AppRoutes.ourSpecialityScreen);
-                                                            },
-                                                            child: Text(
-                                                              "lbl_shop_now".tr,
-                                                              style: TextStyle(
-                                                                  color: Colors.black, fontSize: 16),
-                                                            ),
-                                                            style:
-                                                                ElevatedButton
-                                                                    .styleFrom(
-                                                              // backgroundColor: const Color.fromARGB(255, 245, 126, 166),
-                                                              // backgroundColor: Color.fromARGB(255, 255, 255, 255),
-                                                              backgroundColor : Color.fromARGB(255, 255, 255, 255),
-                                                              // foregroundColor :
-                                                              //     Colors.white,
-                                                              shape:
-                                                                  RoundedRectangleBorder(
-                                                                side: BorderSide(
-                                                                    color: Color.fromARGB(255, 0, 0, 0)),
-                                                                borderRadius:
-                                                                    BorderRadius
-                                                                        .circular(
-                                                                            18.0), // Adjust the border radius as needed
-                                                              ),
-                                                            ),
-                                                          ),
-                                                          // child: Text(
-                                                          //   "lbl_shop_now".tr,
-                                                          //   overflow:
-                                                          //       TextOverflow
-                                                          //           .ellipsis,
-                                                          //   textAlign:
-                                                          //       TextAlign.left,
-                                                          //   style: CustomTextStyles
-                                                          //       .titleMediumErrorContainer,
+                                                          // child: ElevatedButton(
+                                                          //   onPressed: () {
+                                                          //     Get.toNamed(AppRoutes.ourSpecialityScreen);
+                                                          //   },
+                                                          //   child: Text(
+                                                          //     "lbl_shop_now".tr,
+                                                          //     style: TextStyle(
+                                                          //         color: Colors.black, fontSize: 16),
+                                                          //   ),
+                                                          //   style:
+                                                          //       ElevatedButton
+                                                          //           .styleFrom(
+                                                          //     // backgroundColor: const Color.fromARGB(255, 245, 126, 166),
+                                                          //     // backgroundColor: Color.fromARGB(255, 255, 255, 255),
+                                                          //     backgroundColor : Color.fromARGB(255, 255, 255, 255),
+                                                          //     // foregroundColor :
+                                                          //     //     Colors.white,
+                                                          //     shape:
+                                                          //         RoundedRectangleBorder(
+                                                          //       side: BorderSide(
+                                                          //           color: Color.fromARGB(255, 0, 0, 0)),
+                                                          //       borderRadius:
+                                                          //           BorderRadius
+                                                          //               .circular(
+                                                          //                   10.0), // Adjust the border radius as needed
+                                                          //     ),
+                                                          //   ),
                                                           // ),
+                                       
+                                                          child: Text(
+                                                            "lbl_shop_now".tr,
+                                                            overflow:
+                                                                TextOverflow
+                                                                    .ellipsis,
+                                                            textAlign:
+                                                                TextAlign.left,
+                                                            // style: CustomTextStyles
+                                                            //     .titleMediumErrorContainer,
+                                                            style: TextStyle(color: Colors.black,),
+                                                          ),
                                                         ),
-                                                        // CustomImageView(
-                                                        //   svgPath: ImageConstant
-                                                        //       .imgArrowRightfULL,
-                                                        //   color: appTheme
-                                                        //       .shopbuttonTextColor,
-                                                        //   height: getSize(
-                                                        //     20,
-                                                        //   ),
-                                                        //   width: getSize(
-                                                        //     20,
-                                                        //   ),
-                                                        //   margin: getMargin(
-                                                        //     left: 5,
-                                                        //     bottom: 1,
-                                                        //   ),
-                                                        // ),
+                                                        CustomImageView(
+                                                          svgPath: ImageConstant
+                                                              .imgArrowRightfULL,
+                                                          // color: appTheme
+                                                          //     .shopbuttonTextColor,
+                                                          color: Colors.black,
+                                                          height: getSize(
+                                                            20,
+                                                          ),
+                                                          width: getSize(
+                                                            20,
+                                                          ),
+                                                          margin: getMargin(
+                                                            left: 5,
+                                                            bottom: 1,
+                                                          ),
+                                                        ),
                                                       ],
                                                     ),
                                                   )
@@ -315,7 +322,7 @@ class _HomePageState extends State<HomePage> {
                                                         child: CustomImageView(
                                                           imagePath:
                                                               model.image!,
-                                                          fit: BoxFit.fill,
+                                                          fit: BoxFit.contain,
                                                         ),
                                                       ),
                                                     ),
